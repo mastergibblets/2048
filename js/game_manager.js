@@ -128,7 +128,7 @@ GameManager.prototype.moveTile = function (tile, cell) {
 
 // Move tiles on the grid in the specified direction
 GameManager.prototype.move = function (direction) {
-  // 0: up, 1: right, 2: down, 3: left
+  // 1: up, 2: right, 3: down, 4: left
   var self = this;
 
   if (this.isGameTerminated()) return; // Don't do anything if the game's over
@@ -194,10 +194,10 @@ GameManager.prototype.move = function (direction) {
 GameManager.prototype.getVector = function (direction) {
   // Vectors representing tile movement
   var map = {
-    0: { x: 0,  y: -1 }, // Up
-    1: { x: 1,  y: 0 },  // Right
-    2: { x: 0,  y: 1 },  // Down
-    3: { x: -1, y: 0 }   // Left
+    1: { x: 0,  y: -1 }, // Up
+    2: { x: 1,  y: 0 },  // Right
+    3: { x: 0,  y: 1 },  // Down
+    4: { x: -1, y: 0 }   // Left
   };
 
   return map[direction];
